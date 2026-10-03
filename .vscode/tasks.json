@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build and verify arena experiment",
+			"type": "shell",
+			"command": "make",
+			"args": [
+				"CC=clang",
+				"debug",
+				"release",
+				"sanitize",
+				"check"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "test"
+		},
+		{
+			"label": "Run Life",
+			"type": "shell",
+			"command": "make",
+			"args": ["run"],
+			"problemMatcher": ["$gcc"]
+		}
+	]
+}
